@@ -35,6 +35,8 @@ echo -n aqz-KE-bpKQ | faas invoke youtube-filename
 Invoke using CURL:
 ```
 curl https://your-openfaas.com/function/youtube-filename -d "https://www.youtube.com/watch?v=aqz-KE-bpKQ"
+
+curl https://your-openfaas.com/function/youtube-filename -d "aqz-KE-bpKQ"
 ```
 
 The result in this case will be:  
