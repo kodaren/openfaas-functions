@@ -42,9 +42,18 @@ curl https://your-openfaas.com/function/youtube-filename -d "aqz-KE-bpKQ"
 The result in this case will be:  
 Big_Buck_Bunny_60fps_4K_-_Official_Blender_Foundation_Short_Film.webm
 
-### Download a movie with the original filename
+### Download a movie with the original filename (Funny Bear Commercial)
+
+Using bash/shell script:
 ```
-export YOUTUBE_URL=https://www.youtube.com/watch?v=aqz-KE-bpKQ
+export YOUTUBE_URL=https://www.youtube.com/watch?v=lef4JyBdwyY
 export DOWNLOAD_FILE=$(echo -n $YOUTUBE_URL | faas invoke youtube-filename)
 echo -n $YOUTUBE_URL | faas invoke youtubedl2 > $DOWNLOAD_FILE
+```
+Using PowerShell:
+```
+$YOUTUBE_URL="https://www.youtube.com/watch?v=lef4JyBdwyY"
+[String]$DOWNLOAD_FILE=(Invoke-Webrequest -UseBasicParsing -Uri https://your-openfaas.com/function/youtube-filename -Body $YOUTUBE_URL -Method POST)
+[System.IO.Path]::GetInvalidFileNameChars() | % {$DOWNLOAD_FILE = $DOWNLOAD_FILE.replace($_,'.')}
+Invoke-Webrequest -Uri https://your-openfaas.com/function/youtubedl2 -Body $YOUTUBE_URL -Method POST -OutFile $DOWNLOAD_FILE
 ```
