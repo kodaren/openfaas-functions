@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: https://faas.kodaren.com
+functions:
+  youtubedl2:
+    lang: bash-streaming
+    handler: ./youtubedl2
+    image: kodaren/youtubedl2:latest
+
