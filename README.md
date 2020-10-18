@@ -8,7 +8,9 @@ It is using the great python based youtube-dl utility behind the scenes:
 https://github.com/ytdl-org/youtube-dl
 
 Invoke using the FAAS CLI:
-```echo -n https://www.youtube.com/watch?v=aqz-KE-bpKQ | faas invoke youtubedl2 > movie.mp4```
+```
+echo -n https://www.youtube.com/watch?v=aqz-KE-bpKQ | faas invoke youtubedl2 > movie.mp4
+```
 
 ## youtube-filename
 Get a filename from the given YouTube URL or ID
