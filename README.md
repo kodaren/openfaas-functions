@@ -23,7 +23,7 @@ curl https://your-openfaas.com/function/youtubedl2 -d "https://www.youtube.com/w
 ```
 
 ### youtube-filename
-Get a filename from the given YouTube URL or ID
+Get the original filename from the given YouTube URL or ID
 
 Invoke using the FAAS CLI:
 ```
