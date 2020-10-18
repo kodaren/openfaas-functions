@@ -64,6 +64,6 @@ Using PowerShell:
 ```
 $YOUTUBE_URL="https://www.youtube.com/watch?v=lef4JyBdwyY"
 [String]$DOWNLOAD_FILE=(Invoke-Webrequest -UseBasicParsing -Uri https://your-openfaas.com/function/youtube-filename -Body $YOUTUBE_URL -Method POST)
-[System.IO.Path]::GetInvalidFileNameChars() | % {$DOWNLOAD_FILE = $DOWNLOAD_FILE.replace($_,'.')}
+#[System.IO.Path]::GetInvalidFileNameChars() | % {$DOWNLOAD_FILE = $DOWNLOAD_FILE.replace($_,'.')}
 Invoke-Webrequest -Uri https://your-openfaas.com/function/youtubedl2 -Body $YOUTUBE_URL -Method POST -OutFile $DOWNLOAD_FILE
 ```
