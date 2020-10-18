@@ -6,5 +6,5 @@ functions:
   youtube-filename:
     lang: bash-streaming
     handler: ./youtube-filename
-    image: kodaren/youtube-filename:latest
+    image: kodaren/youtube-filename:0.2
 

@@ -9,4 +9,7 @@ fi
 
 trimmedURL=$(echo "$url" | tr -d '\n')
 
-youtube-dl --get-filename -o '%(title)s.%(ext)s' $trimmedURL --restrict-filenames
+originalFileName=$(youtube-dl --get-filename -o '%(title)s.%(ext)s' $trimmedURL --restrict-filenames)
+trimmedFileName=$(echo "$originalFileName" | tr -d '\n')
+echo -n $trimmedFileName
+
