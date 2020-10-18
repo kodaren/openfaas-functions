@@ -3,6 +3,16 @@ Various OpenFAAS functions to be deployed using the faas cli.
 OpenFaas home page: https://www.openfaas.com/  
 Install OpenFAAS CLI: https://docs.openfaas.com/cli/install/  
 
+Please observe that on Windows it is a good idea to create a symbolic link to the faas-cli.exe file:
+* Download the FAAS CLI and then create a directory. For instance "c:\Program Files (x86)\OpenFAAS"
+* Copy the faas-cli.exe file to the newly created directory
+* Add the the directory to the system path (environment variable)
+* CD to the directory
+* Create a symbolic link to the FAAS CLI:
+```
+mklink faas.exe faas-cli.exe
+```
+
 ## YouTube functions
 Assorted functions for downloading a YouTube movie. It will download the highest quality available.
 
