@@ -1,7 +1,11 @@
 # OpenFAAS functions
-Assorted functions for downloading a YouTube movie. It will download the highest quality available.
+Various OpenFAAS functions to be deployed using the faas cli.  
+OpenFaas home page: https://www.openfaas.com/  
+Install OpenFAAS CLI: https://docs.openfaas.com/cli/install/  
 
 ## YouTube functions
+Assorted functions for downloading a YouTube movie. It will download the highest quality available.
+
 ### youtubedl2
 Based on https://github.com/faas-and-furious/youtube-dl. Unfortunately this version do not work (at least for me). It takes a very long time and then you get a 502 HTTP error. Updated it to use the of-watchdog and bash-streaming template. 
 
