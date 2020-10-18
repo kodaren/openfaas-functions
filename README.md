@@ -14,7 +14,12 @@ https://github.com/ytdl-org/youtube-dl
 
 Invoke using the FAAS CLI:
 ```
-echo -n https://www.youtube.com/watch?v=aqz-KE-bpKQ | faas invoke youtubedl2 > movie.mp4
+echo -n https://www.youtube.com/watch?v=aqz-KE-bpKQ | faas invoke youtubedl2 > big_buck_bunny.webm
+```
+
+Invoke using CURL:
+```
+curl https://your-openfaas.com/function/youtubedl2 -d "https://www.youtube.com/watch?v=aqz-KE-bpKQ" -o big_buck_bunny.webm
 ```
 
 ### youtube-filename
@@ -26,6 +31,12 @@ echo -n https://www.youtube.com/watch?v=aqz-KE-bpKQ | faas invoke youtube-filena
 
 echo -n aqz-KE-bpKQ | faas invoke youtube-filename
 ```
+
+Invoke using CURL:
+```
+curl https://your-openfaas.com/function/youtube-filename -d "https://www.youtube.com/watch?v=aqz-KE-bpKQ"
+```
+
 The result in this case will be:  
 Big_Buck_Bunny_60fps_4K_-_Official_Blender_Foundation_Short_Film.webm
 
